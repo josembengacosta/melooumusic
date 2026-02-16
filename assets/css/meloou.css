@@ -1,0 +1,215 @@
+:root {
+    /* Cores Primárias MELOOU */
+    --mel-primary: #fec324;
+    --mel-primary-dark: #d4a20c;
+    --mel-primary-light: #ffd95a;
+    --mel-primary-gradient: linear-gradient(135deg, #fec324 0%, #ffd95a 100%);
+    
+    /* Estados */
+    --mel-success: #10b981;
+    --mel-warning: #f59e0b;
+    --mel-error: #ef4444;
+    --mel-info: #3b82f6;
+    
+    /* Espaçamento (8px grid) */
+    --mel-spacing-xs: 0.25rem;
+    --mel-spacing-sm: 0.5rem;
+    --mel-spacing-md: 1rem;
+    --mel-spacing-lg: 1.5rem;
+    --mel-spacing-xl: 2rem;
+    --mel-spacing-xxl: 3rem;
+    
+    /* Tipografia */
+    --mel-text-xs: 0.75rem;
+    --mel-text-sm: 0.875rem;
+    --mel-text-base: 1rem;
+    --mel-text-lg: 1.125rem;
+    --mel-text-xl: 1.25rem;
+    --mel-text-2xl: 1.5rem;
+    --mel-text-3xl: 1.875rem;
+    --mel-text-4xl: 2.25rem;
+    
+    /* Efeitos */
+    --mel-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --mel-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --mel-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --mel-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --mel-shadow-glow: 0 0 0 4px rgba(254, 195, 36, 0.15);
+    --mel-transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="dark"] {
+    --mel-bg-black: #000000;
+    --mel-bg-card: #111111;
+    --mel-bg-elevated: #1a1a1a;
+    --mel-text-primary: #ffffff;
+    --mel-text-secondary: #a0a0a0;
+    --mel-border-color: #222222;
+}
+
+[data-theme="light"] {
+    --mel-bg-black: #f8f9fa;
+    --mel-bg-card: #ffffff;
+    --mel-bg-elevated: #f1f3f5;
+    --mel-text-primary: #212529;
+    --mel-text-secondary: #495057;
+    --mel-border-color: #dee2e6;
+}
+
+:root {
+    --bs-primary: var(--mel-primary);
+    --bs-primary-rgb: 254, 195, 36;
+    --bs-body-bg: var(--mel-bg-black);
+    --bs-body-color: var(--mel-text-primary);
+    --bs-border-color: var(--mel-border-color);
+    --bs-link-color: var(--mel-primary);
+    --bs-link-hover-color: var(--mel-primary-dark);
+    --bs-border-radius: 12px;
+    --bs-border-radius-sm: 8px;
+    --bs-border-radius-lg: 16px;
+    --bs-border-radius-xl: 20px;
+    --bs-font-sans-serif: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.btn-primary {
+    --bs-btn-bg: var(--mel-primary);
+    --bs-btn-border-color: var(--mel-primary);
+    --bs-btn-hover-bg: var(--mel-primary-dark);
+    --bs-btn-hover-border-color: var(--mel-primary-dark);
+    --bs-btn-active-bg: var(--mel-primary-dark);
+    --bs-btn-active-border-color: var(--mel-primary-dark);
+    --bs-btn-disabled-bg: var(--mel-primary);
+    --bs-btn-disabled-border-color: var(--mel-primary);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--mel-primary);
+    box-shadow: var(--mel-shadow-glow);
+}
+
+.bg-dark {
+    background-color: var(--mel-bg-card) !important;
+}
+
+.border {
+    border-color: var(--mel-border-color) !important;
+}
+
+.text-muted {
+    color: var(--mel-text-secondary) !important;
+}
+
+body {
+    background-color: var(--mel-bg-black);
+    color: var(--mel-text-primary);
+    font-family: var(--bs-font-sans-serif);
+    line-height: 1.6;
+    transition: background-color var(--mel-transition), color var(--mel-transition);
+}
+
+/* Spacing Utilities */
+.py-6 { padding-top: 4rem; padding-bottom: 4rem; }
+.py-7 { padding-top: 5rem; padding-bottom: 5rem; }
+.py-8 { padding-top: 6rem; padding-bottom: 6rem; }
+
+.mt-6 { margin-top: 4rem; }
+.mb-6 { margin-bottom: 4rem; }
+
+/* Text Colors */
+.text-mel-primary { color: var(--mel-primary) !important; }
+.text-mel-secondary { color: var(--mel-text-secondary) !important; }
+.text-mel-success { color: var(--mel-success) !important; }
+.text-mel-warning { color: var(--mel-warning) !important; }
+.text-mel-error { color: var(--mel-error) !important; }
+.text-mel-info { color: var(--mel-info) !important; }
+
+/* Background Colors */
+.bg-mel-primary { background-color: var(--mel-primary) !important; }
+.bg-mel-dark { background-color: var(--mel-bg-black) !important; }
+.bg-mel-card { background-color: var(--mel-bg-card) !important; }
+.bg-mel-elevated { background-color: var(--mel-bg-elevated) !important; }
+.bg-mel-border { background-color: var(--mel-border-color) !important; }
+
+/* Border Colors */
+.border-mel { border-color: var(--mel-border-color) !important; }
+.border-mel-primary { border-color: var(--mel-primary) !important; }
+
+/* Gradient Backgrounds */
+.bg-mel-primary-10 { background-color: rgba(254, 195, 36, 0.1) !important; }
+.bg-mel-success-10 { background-color: rgba(16, 185, 129, 0.1) !important; }
+.bg-mel-info-10 { background-color: rgba(59, 130, 246, 0.1) !important; }
+
+/* Typography Scale */
+.display-1 { font-size: var(--mel-text-4xl); }
+.display-2 { font-size: var(--mel-text-3xl); }
+.display-3 { font-size: var(--mel-text-2xl); }
+.display-4 { font-size: var(--mel-text-xl); }
+.display-5 { font-size: var(--mel-text-lg); }
+
+.fs-7 { font-size: var(--mel-text-sm); }
+.fs-8 { font-size: var(--mel-text-xs); }
+
+.lead {
+    font-size: var(--mel-text-lg);
+    color: var(--mel-text-secondary);
+}
+
+/* Section Spacing */
+.section {
+    padding-top: var(--mel-spacing-xxl);
+    padding-bottom: var(--mel-spacing-xxl);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--mel-bg-black) 0%, rgba(0,0,0,0.95) 100%);
+}
+
+.hero-gradient {
+    position: absolute;
+    top: -50%;
+    right: -30%;
+    width: 100%;
+    height: 200%;
+    background: radial-gradient(circle at 70% 50%, rgba(254, 195, 36, 0.15) 0%, transparent 50%);
+    z-index: 0;
+}
+
+.hero > .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    html { font-size: 14px; }
+    
+    .display-3 { font-size: calc(var(--mel-text-2xl) * 0.9); }
+    .display-4 { font-size: calc(var(--mel-text-xl) * 0.9); }
+    
+    .hero { text-align: center; }
+    
+    .py-6 { padding-top: 3rem; padding-bottom: 3rem; }
+    .py-7 { padding-top: 4rem; padding-bottom: 4rem; }
+    .py-8 { padding-top: 5rem; padding-bottom: 5rem; }
+}
+
+/* Print Styles */
+@media print {
+    .announcement-bar,
+    .navbar,
+    .btn,
+    .floating-elements {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    
+    a { color: black !important; text-decoration: underline !important; }
+}

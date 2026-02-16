@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="pt-AO" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>MELOOU | A Próxima Evolução do Streaming Musical em Angola</title>
+    <meta
+      name="description"
+      content="Plataforma de streaming musical angolana focada em qualidade de áudio, descoberta de talentos nacionais e monetização justa para artistas. Lançamento em Outubro 2026."
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://melooumusic.vercel.app" />
+    <meta property="og:title" content="MELOOU | Streaming Musical Angolano" />
+    <meta
+      property="og:description"
+      content="Onde ouvintes exigentes e artistas sérios se encontram. Streaming de alta qualidade com foco em música angolana e fair pay."
+    />
+    <meta
+      property="og:image"
+      content="https://melooumusic.vercel.app/assets/img/og-image-ao.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="MELOOU | Streaming Feito em Angola" />
+    <meta
+      name="twitter:description"
+      content="Plataforma de streaming construída para valorizar a música e os artistas angolanos."
+    />
+    <meta
+      name="twitter:image"
+      content="https://melooumusic.vercel.app/assets/img/twitter-card-ao.jpg"
+    />
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "MELOOU",
+        "description": "Plataforma de streaming musical angolana",
+        "url": "https://melooumusic.vercel.app",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Luanda",
+          "addressCountry": "AO"
+        }
+      }
+    </script>
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://melooumusic.vercel.app" />
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="MELOOU Technologies Angola" />
+
+    <!-- Bootstrap 5.3 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/meloou-logo.png" />
+
+    <!-- iOS Meta -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#000000" />
+    <meta name="msapplication-TileColor" content="#000000" />
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/meloou.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+  </head>
+  <style>
+    .logo-image {
+      height: min(40px, 8vw);
+      min-height: 20px;
+    }
+
+    .logo-text {
+      font-size: min(1.5rem, 5vw);
+      font-weight: bold;
+      line-height: 1;
+    }
+  </style>
+  <body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar bg-mel-primary text-dark py-2">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-8">
+            <p class="mb-0 fw-semibold">
+              <i class="fas fa-map-marker-alt me-2"></i>
+              <strong>LANÇAMENTO EM OUTUBRO 2026</strong> - Artistas angolanos,
+              kandengues, é já!
+            </p>
+          </div>
+          <div class="col-md-4 text-md-end">
+            <a href="#waitlist" class="text-dark fw-bold text-decoration-none">
+              Garantir meu acesso <i class="fas fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark py-3"
+      aria-label="Navegação principal"
+    >
+      <div class="container">
+        <a
+          class="navbar-brand d-flex align-items-center"
+          href="/"
+          aria-label="MELOOU - Voltar ao início"
+        >
+          <img
+            src="assets/img/meloou-logo.png"
+            alt="Logo MELOOU Angola"
+            class="img-fluid logo-image me-2"
+            style="height: 40px"
+          />
+          <span class="fs-3 fw-bold text-white logo-text me-2">MELOOU</span>
+          <span class="badge bg-mel-primary text-dark ms-2">MUSIC</span>
+        </a>
+
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarMain"
+          aria-controls="navbarMain"
+          aria-expanded="false"
+          aria-label="Alternar navegação"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMain">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+            <li class="nav-item mx-2">
+              <a class="nav-link fw-medium" href="#diferenciais"
+                >Diferenciais</a
+              >
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link fw-medium" href="#artistas">Para Artistas</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link fw-medium" href="#tecnologia">Tecnologia</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link fw-medium" href="#roadmap">Roadmap</a>
+            </li>
+            <li class="nav-item ms-3">
+              <a
+                href="#waitlist"
+                class="btn btn-mel-gradient px-4 py-2 fw-semibold"
+              >
+                <i class="fas fa-star me-2"></i>Acesso Antecipado
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="hero position-relative overflow-hidden"
+      aria-label="Introdução da plataforma"
+    >
+      <div class="container py-6 py-lg-8">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <div class="mb-4">
+              <span
+                class="badge bg-mel-primary text-dark px-3 py-2 fw-semibold fs-6"
+              >
+                <i class="fas fa-bolt me-2"></i>A nova plataforma de streaming
+                feita em Angola
+              </span>
+            </div>
+
+            <h1 class="display-3 fw-bold mb-4">
+              Música, tecnologia e
+              <span class="text-mel-primary">oportunidades</span> para artistas
+              e ouvintes angolanos
+            </h1>
+
+            <p class="lead fs-4 text-mel-secondary mb-4">
+              <strong>MELOOU não é mais um streaming.</strong> É um ecossistema
+              onde qualidade de áudio, descoberta de talentos nacionais e
+              remuneração justa coexistem.
+            </p>
+
+            <div class="value-proposition mb-5">
+              <div class="d-flex align-items-center mb-3">
+                <i class="fas fa-check-circle text-mel-primary fs-5 me-3"></i>
+                <span class="fs-5"
+                  >Áudio lossless incluso em todos os planos</span
+                >
+              </div>
+              <div class="d-flex align-items-center mb-3">
+                <i class="fas fa-check-circle text-mel-primary fs-5 me-3"></i>
+                <span class="fs-5">90% de royalties diretos para artistas</span>
+              </div>
+              <div class="d-flex align-items-center">
+                <i class="fas fa-check-circle text-mel-primary fs-5 me-3"></i>
+                <span class="fs-5"
+                  >Algoritmos que valorizam a música angolana</span
+                >
+              </div>
+            </div>
+
+            <div class="d-flex flex-column flex-sm-row gap-3">
+              <a
+                href="#waitlist"
+                class="btn btn-mel-gradient btn-lg px-5 py-3 fw-semibold"
+              >
+                <i class="fas fa-crown me-2"></i>Pré-registo
+              </a>
+              <a
+                href="#tecnologia"
+                class="btn btn-outline-light btn-lg px-5 py-3"
+              >
+                <i class="fas fa-play-circle me-2"></i>Conhecer Plataforma
+              </a>
+            </div>
+
+            <div class="trust-signals mt-5 pt-4 border-top border-mel-border">
+              <p class="text-mel-secondary mb-2">
+                <i class="fas fa-shield-alt text-mel-info me-2"></i>
+                <strong>Feito em Angola</strong> · Servidores locais · Dados
+                seguros
+              </p>
+              <div class="d-flex align-items-center">
+                <div class="trust-badge me-3">
+                  <i class="fas fa-lock text-mel-success"></i>
+                  <small class="ms-1">Dados seguros</small>
+                </div>
+                <div class="trust-badge me-3">
+                  <i class="fas fa-infinity text-mel-primary"></i>
+                  <small class="ms-1">Sem limites</small>
+                </div>
+                <div class="trust-badge">
+                  <i class="fas fa-globe-africa text-mel-info"></i>
+                  <small class="ms-1">Feito em Angola</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="device-showcase position-relative">
+              <div class="device-frame mx-auto">
+                <div class="device-screen bg-dark rounded-4 overflow-hidden">
+                  <!-- App Interface Mockup -->
+                  <div class="app-interface">
+                    <div
+                      class="app-header d-flex justify-content-between align-items-center p-4"
+                    >
+                      <div class="d-flex align-items-center">
+                        <div class="playing-indicator me-3">
+                          <div class="equalizer-bar"></div>
+                          <div class="equalizer-bar"></div>
+                          <div class="equalizer-bar"></div>
+                        </div>
+                        <div>
+                          <div class="text-white fw-semibold">
+                            A tocar agora
+                          </div>
+                          <div class="text-mel-primary">Artista Angolano</div>
+                        </div>
+                      </div>
+                      <div class="app-actions">
+                        <i class="fas fa-heart text-mel-error fs-5"></i>
+                      </div>
+                    </div>
+
+                    <div class="album-art-container p-4">
+                      <div class="album-art-placeholder rounded-3 mx-auto">
+                        <div class="vinyl-overlay">
+                          <div
+                            class="vinyl-center"
+                            style="background: var(--mel-primary)"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="player-controls p-4">
+                      <div class="progress-bar-container mb-3">
+                        <div class="progress bg-mel-border" style="height: 4px">
+                          <div
+                            class="progress-bar"
+                            style="
+                              width: 65%;
+                              background: var(--mel-primary-gradient);
+                            "
+                          ></div>
+                        </div>
+                        <div
+                          class="d-flex justify-content-between text-mel-secondary fs-7 mt-1"
+                        >
+                          <span>2:15</span>
+                          <span>3:45</span>
+                        </div>
+                      </div>
+
+                      <div
+                        class="d-flex justify-content-center align-items-center gap-4"
+                      >
+                        <button class="btn-control" aria-label="Anterior">
+                          <i class="fas fa-step-backward fs-4"></i>
+                        </button>
+                        <button class="btn-play-pause" aria-label="Play/Pause">
+                          <i
+                            class="fas fa-pause-circle fs-1"
+                            style="color: var(--mel-primary)"
+                          ></i>
+                        </button>
+                        <button class="btn-control" aria-label="Próximo">
+                          <i class="fas fa-step-forward fs-4"></i>
+                        </button>
+                      </div>
+
+                      <div class="d-flex justify-content-center gap-3 mt-4">
+                        <button class="btn-action" aria-label="Aleatório">
+                          <i class="fas fa-random"></i>
+                        </button>
+                        <button
+                          class="btn-action"
+                          aria-label="Adicionar à biblioteca"
+                        >
+                          <i class="fas fa-plus"></i>
+                        </button>
+                        <button class="btn-action" aria-label="Partilhar">
+                          <i class="fas fa-share-alt"></i>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="queue-preview p-4 border-top border-mel-border">
+                      <div
+                        class="d-flex justify-content-between align-items-center mb-3"
+                      >
+                        <div class="text-white fw-semibold">A seguir</div>
+                        <div class="badge bg-mel-primary text-dark">NOVO</div>
+                      </div>
+                      <div class="queue-item d-flex align-items-center">
+                        <div class="queue-album me-3"></div>
+                        <div class="flex-grow-1">
+                          <div class="text-white">Kizomba Hits 2026</div>
+                          <div class="text-mel-secondary fs-7">
+                            Playlist em alta
+                          </div>
+                        </div>
+                        <i
+                          class="fas fa-play"
+                          style="color: var(--mel-primary)"
+                        ></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="floating-elements">
+                <div class="floating-card card-1">
+                  <i
+                    class="fas fa-headphones-alt"
+                    style="color: var(--mel-primary)"
+                  ></i>
+                  <span>Áudio Lossless</span>
+                </div>
+                <div class="floating-card card-2">
+                  <i
+                    class="fas fa-chart-line"
+                    style="color: var(--mel-success)"
+                  ></i>
+                  <span>90% Royalties</span>
+                </div>
+                <div class="floating-card card-3">
+                  <i class="fas fa-music" style="color: var(--mel-info)"></i>
+                  <span>Música Angolana</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="hero-gradient"
+        style="
+          background: radial-gradient(
+            circle at 70% 50%,
+            rgba(254, 195, 36, 0.15) 0%,
+            transparent 50%
+          );
+        "
+      ></div>
+    </section>
+
+    <!-- Value Proposition -->
+    <section
+      id="diferenciais"
+      class="section value-prop bg-mel-elevated"
+      aria-labelledby="diferenciais-title"
+    >
+      <div class="container">
+        <div class="row justify-content-center mb-6">
+          <div class="col-lg-8 text-center">
+            <h2 id="diferenciais-title" class="display-5 fw-bold mb-4">
+              Porquê escolher <span class="text-mel-primary">MELOOU</span>?
+            </h2>
+            <p class="lead text-mel-secondary">
+              Construímos a plataforma que Angola merece. Cada decisão técnica e
+              de produto foi tomada com um objetivo: valorizar a música e os
+              artistas nacionais.
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-4 g-lg-5">
+          <div class="col-md-6 col-lg-4">
+            <div class="value-card h-100 p-4 p-lg-5 rounded-4">
+              <div class="value-icon mb-4">
+                <div class="icon-wrapper bg-mel-primary-10">
+                  <i class="fas fa-wave-square text-mel-primary"></i>
+                </div>
+              </div>
+              <h3 class="h3 fw-bold mb-3">Qualidade Premium</h3>
+              <p class="text-mel-secondary mb-4">
+                Streaming lossless (FLAC 24-bit/192kHz) incluso em todos os
+                planos. Áudio com a máxima fidelidade para os verdadeiros
+                apreciadores.
+              </p>
+              <ul class="value-list">
+                <li>
+                  <i class="fas fa-check text-mel-primary me-2"></i>Zero
+                  compressão
+                </li>
+                <li>
+                  <i class="fas fa-check text-mel-primary me-2"></i>Spatial
+                  Audio nativo
+                </li>
+                <li>
+                  <i class="fas fa-check text-mel-primary me-2"></i>Mastering
+                  verificada
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="value-card h-100 p-4 p-lg-5 rounded-4">
+              <div class="value-icon mb-4">
+                <div class="icon-wrapper bg-mel-primary-10">
+                  <i class="fas fa-hand-holding-usd text-mel-success"></i>
+                </div>
+              </div>
+              <h3 class="h3 fw-bold mb-3">Remuneração Justa</h3>
+              <p class="text-mel-secondary mb-4">
+                90% dos royalties vão diretamente para artistas — o dobro da
+                média do mercado. Pagamentos mensais transparentes e sem
+                intermediários.
+              </p>
+              <ul class="value-list">
+                <li>
+                  <i class="fas fa-check text-mel-primary me-2"></i>Pagamentos
+                  em Kz
+                </li>
+                <li>
+                  <i class="fas fa-check text-mel-primary me-2"></i>Dashboard em
+                  tempo real
+                </li>
+                <li>
+                  <i class="fas fa-check text-mel-primary me-2"></i>Sem
+                  intermediários
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="value-card h-100 p-4 p-lg-5 rounded-4">
+              <div class="value-icon mb-4">
+                <div class="icon-wrapper bg-mel-info-10">
+                  <i class="fas fa-brain text-mel-info"></i>
+                </div>
+              </div>
+              <h3 class="h3 fw-bold mb-3">Descoberta Inteligente</h3>
+              <p class="text-mel-secondary mb-4">
+                Algoritmos que entendem o contexto cultural angolano e valorizam
+                artistas emergentes. Curadoria humana especializada em música
+                nacional.
+              </p>
+              <ul class="value-list">
+                <li>
+                  <i class="fas fa-check text-mel-primary me-2"></i>Curadoria
+                  especializada
+                </li>
+                <li>
+                  <i class="fas fa-check text-mel-primary me-2"></i>Playlists
+                  nacionais
+                </li>
+                <li>
+                  <i class="fas fa-check text-mel-primary me-2"></i>Artist-first
+                  discovery
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- For Artists -->
+    <section
+      id="artistas"
+      class="section for-artists"
+      aria-labelledby="artistas-title"
+    >
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <div
+              class="artist-dashboard-preview rounded-4 overflow-hidden border border-mel-border"
+            >
+              <div
+                class="dashboard-header bg-dark p-3 d-flex justify-content-between"
+              >
+                <div class="d-flex align-items-center">
+                  <div
+                    class="avatar-placeholder rounded-circle me-3"
+                    style="background: var(--mel-primary-gradient)"
+                  ></div>
+                  <div>
+                    <div class="text-white fw-semibold">Painel do Artista</div>
+                    <div class="text-mel-secondary fs-7">
+                      Gestão da carreira
+                    </div>
+                  </div>
+                </div>
+                <div class="badge bg-mel-primary text-dark">PRO</div>
+              </div>
+
+              <div class="dashboard-content p-4">
+                <div class="row g-3 mb-4">
+                  <div class="col-6">
+                    <div class="stat-card p-3 rounded-3">
+                      <div class="text-mel-secondary fs-7">
+                        Streams este mês
+                      </div>
+                      <div class="h4 fw-bold text-white">42.8K</div>
+                      <div class="text-mel-success fs-7">
+                        <i class="fas fa-arrow-up me-1"></i> +24%
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="stat-card p-3 rounded-3">
+                      <div class="text-mel-secondary fs-7">Royalties</div>
+                      <div class="h4 fw-bold text-white">1.248.000 Kz</div>
+                      <div class="text-mel-success fs-7">
+                        <i class="fas fa-check-circle me-1"></i> Disponível
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="chart-placeholder mb-4">
+                  <div
+                    class="d-flex align-items-end gap-1"
+                    style="height: 100px"
+                  >
+                    <div
+                      class="chart-bar"
+                      style="background: var(--mel-primary-gradient)"
+                    ></div>
+                    <div
+                      class="chart-bar"
+                      style="background: var(--mel-primary-gradient)"
+                    ></div>
+                    <div
+                      class="chart-bar"
+                      style="background: var(--mel-primary-gradient)"
+                    ></div>
+                    <div
+                      class="chart-bar"
+                      style="background: var(--mel-primary-gradient)"
+                    ></div>
+                    <div
+                      class="chart-bar"
+                      style="background: var(--mel-primary-gradient)"
+                    ></div>
+                  </div>
+                </div>
+
+                <div class="insights">
+                  <div class="insight-item d-flex align-items-center mb-2">
+                    <i class="fas fa-map-marker-alt text-mel-info me-3"></i>
+                    <div>
+                      <div class="text-white fs-7">Top cidade: Luanda</div>
+                      <div class="text-mel-secondary fs-8">2.1K ouvintes</div>
+                    </div>
+                  </div>
+                  <div class="insight-item d-flex align-items-center">
+                    <i class="fas fa-users text-mel-primary me-3"></i>
+                    <div>
+                      <div class="text-white fs-7">+412 novos seguidores</div>
+                      <div class="text-mel-secondary fs-8">Últimos 7 dias</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 ps-lg-5">
+            <h2 id="artistas-title" class="display-5 fw-bold mb-4">
+              Feito para <span class="text-mel-primary">quem cria</span>
+            </h2>
+
+            <p class="lead text-mel-secondary mb-4">
+              Acreditamos que os artistas angolanos merecem uma plataforma à
+              altura do seu talento. Por isso construímos a suite de ferramentas
+              mais completa do mercado.
+            </p>
+
+            <div class="artist-features">
+              <div class="feature-item d-flex mb-4">
+                <div class="feature-icon me-4">
+                  <i class="fas fa-upload text-mel-primary fs-3"></i>
+                </div>
+                <div>
+                  <h4 class="h5 fw-bold mb-2">Distribuição Global</h4>
+                  <p class="text-mel-secondary mb-0">
+                    Upload direto em FLAC, metadados avançados, disponível em
+                    Angola e no mundo em 24h.
+                  </p>
+                </div>
+              </div>
+
+              <div class="feature-item d-flex mb-4">
+                <div class="feature-icon me-4">
+                  <i class="fas fa-chart-bar text-mel-success fs-3"></i>
+                </div>
+                <div>
+                  <h4 class="h5 fw-bold mb-2">Analytics em Tempo Real</h4>
+                  <p class="text-mel-secondary mb-0">
+                    Demografia detalhada por província, mapas de calor de
+                    reprodução, análise de playlists e muito mais.
+                  </p>
+                </div>
+              </div>
+
+              <div class="feature-item d-flex">
+                <div class="feature-icon me-4">
+                  <i class="fas fa-handshake text-mel-info fs-3"></i>
+                </div>
+                <div>
+                  <h4 class="h5 fw-bold mb-2">Conexões Diretas</h4>
+                  <p class="text-mel-secondary mb-0">
+                    Conecte-se com fãs, receba feedback direto, anuncie shows e
+                    venda merchandise integrado.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="cta-artist mt-5 pt-4 border-top border-mel-border">
+              <p class="text-mel-secondary mb-3">
+                <i class="fas fa-star text-mel-warning me-2"></i>
+                <strong>Programa Artista Fundador:</strong> 90% de royalties no
+                primeiro ano
+              </p>
+              <a href="#waitlist" class="btn btn-mel-outline">
+                <i class="fas fa-user-plus me-2"></i>Inscrever como Artista
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technology -->
+    <section
+      id="tecnologia"
+      class="section technology bg-mel-elevated"
+      aria-labelledby="tecnologia-title"
+    >
+      <div class="container">
+        <div class="row justify-content-center mb-6">
+          <div class="col-lg-9 text-center">
+            <h2 id="tecnologia-title" class="display-5 fw-bold mb-4">
+              Tecnologia que <span class="text-mel-primary">impressiona</span>
+            </h2>
+            <p class="lead text-mel-secondary">
+              Por trás da experiência simples, há uma infraestrutura complexa e
+              inovadora que garante performance, segurança e escalabilidade.
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-4 g-lg-5">
+          <div class="col-md-6 col-lg-3">
+            <div class="tech-card text-center p-4">
+              <div class="tech-icon mb-4">
+                <i class="fas fa-server fs-1 text-mel-primary"></i>
+              </div>
+              <h3 class="h5 fw-bold mb-3">Servidores Locais</h3>
+              <p class="text-mel-secondary fs-7">
+                Infraestrutura em Angola, latência mínima, 99.9% de
+                disponibilidade.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="tech-card text-center p-4">
+              <div class="tech-icon mb-4">
+                <i class="fas fa-shield-alt fs-1 text-mel-success"></i>
+              </div>
+              <h3 class="h5 fw-bold mb-3">Segurança Máxima</h3>
+              <p class="text-mel-secondary fs-7">
+                End-to-end encryption, conformidade com leis angolanas, proteção
+                de dados dos artistas.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="tech-card text-center p-4">
+              <div class="tech-icon mb-4">
+                <i class="fas fa-robot fs-1 text-mel-info"></i>
+              </div>
+              <h3 class="h5 fw-bold mb-3">AI Cultural</h3>
+              <p class="text-mel-secondary fs-7">
+                Modelos treinados especificamente para música angolana,
+                recomendações contextualizadas.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="tech-card text-center p-4">
+              <div class="tech-icon mb-4">
+                <i class="fas fa-bolt fs-1 text-mel-warning"></i>
+              </div>
+              <h3 class="h5 fw-bold mb-3">Performance</h3>
+              <p class="text-mel-secondary fs-7">
+                App otimizado para redes móveis, streaming adaptativo, modo
+                offline inteligente.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="trust-badges mt-6 pt-5 border-top border-mel-border">
+          <div class="row g-4 align-items-center">
+            <div class="col-md-4 text-center">
+              <div class="trust-item">
+                <i class="fas fa-map-marked-alt fs-2 text-mel-info mb-3"></i>
+                <div class="fw-semibold">Feito em Angola</div>
+                <small class="text-mel-secondary">Tecnologia nacional</small>
+              </div>
+            </div>
+            <div class="col-md-4 text-center">
+              <div class="trust-item">
+                <i class="fas fa-certificate fs-2 text-mel-success mb-3"></i>
+                <div class="fw-semibold">Certificado</div>
+                <small class="text-mel-secondary">Conformidade legal</small>
+              </div>
+            </div>
+            <div class="col-md-4 text-center">
+              <div class="trust-item">
+                <i class="fas fa-heart fs-2 text-mel-error mb-3"></i>
+                <div class="fw-semibold">Compromisso Social</div>
+                <small class="text-mel-secondary">Apoio à cultura</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Countdown -->
+    <section
+      class="section countdown bg-dark"
+      aria-label="Contagem regressiva para lançamento"
+    >
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h2 class="display-5 fw-bold mb-4">A contagem começou</h2>
+            <p class="lead text-mel-secondary mb-5">
+              Estamos nos estágios finais de desenvolvimento. Inscreva-se agora
+              para acesso beta prioritário.
+            </p>
+
+            <div class="countdown-container mb-5">
+              <div class="row g-3">
+                <div class="col-6 col-md-3">
+                  <div class="countdown-box p-4 rounded-3">
+                    <div
+                      class="countdown-value display-4 fw-bold"
+                      id="countdown-days"
+                      style="color: var(--mel-primary)"
+                    >
+                      00
+                    </div>
+                    <div class="countdown-label text-mel-secondary">Dias</div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="countdown-box p-4 rounded-3">
+                    <div
+                      class="countdown-value display-4 fw-bold"
+                      id="countdown-hours"
+                      style="color: var(--mel-primary)"
+                    >
+                      00
+                    </div>
+                    <div class="countdown-label text-mel-secondary">Horas</div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="countdown-box p-4 rounded-3">
+                    <div
+                      class="countdown-value display-4 fw-bold"
+                      id="countdown-minutes"
+                      style="color: var(--mel-primary)"
+                    >
+                      00
+                    </div>
+                    <div class="countdown-label text-mel-secondary">
+                      Minutos
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="countdown-box p-4 rounded-3">
+                    <div
+                      class="countdown-value display-4 fw-bold"
+                      id="countdown-seconds"
+                      style="color: var(--mel-primary)"
+                    >
+                      00
+                    </div>
+                    <div class="countdown-label text-mel-secondary">
+                      Segundos
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="progress-container mb-4">
+              <div class="d-flex justify-content-between mb-2">
+                <span class="text-mel-secondary">Vagas beta disponíveis</span>
+                <span class="fw-semibold">4,218/10,000</span>
+              </div>
+              <div class="progress" style="height: 8px">
+                <div
+                  class="progress-bar"
+                  role="progressbar"
+                  style="width: 42.18%; background: var(--mel-primary-gradient)"
+                  aria-valuenow="42.18"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Waitlist -->
+    <section
+      id="waitlist"
+      class="section waitlist"
+      aria-labelledby="waitlist-title"
+    >
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div
+              class="waitlist-card p-5 p-lg-6 rounded-4 position-relative overflow-hidden"
+            >
+              <div class="waitlist-badge">
+                <span class="badge bg-mel-primary text-dark px-3 py-2">
+                  <i class="fas fa-gem me-2"></i>ACESSO VIP
+                </span>
+              </div>
+
+              <div class="text-center mb-5">
+                <h2 id="waitlist-title" class="display-5 fw-bold mb-3">
+                  Seja <span class="text-mel-primary">Fundador Digital</span>
+                </h2>
+                <p class="lead text-mel-secondary">
+                  Os primeiros 10.000 inscritos recebem status permanente de
+                  Fundador, 7 Dias Gratuitos e influência no roadmap do produto.
+                </p>
+              </div>
+
+              <form id="waitlistForm" class="needs-validation" action="https://formspree.io/f/xwvnojdz" method="POST" novalidate>
+    <input type="hidden" name="subject" value="Nova inscrição MELOOU Angola!">
+                <div class="row g-3 mb-4">
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input
+                        type="text" name="name"
+                        class="form-control"
+                        id="nameInput"
+                        placeholder="Seu nome"
+                        required autocomplete="name"
+                      />
+                      <label for="nameInput">
+                        <i class="fas fa-user me-2"></i>Nome completo
+                      </label>
+                      <div class="invalid-feedback">
+                        Por favor, insira seu nome.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input
+                        type="email" name="email"
+                        class="form-control"
+                        id="emailInput"
+                        placeholder="seu@email.com"
+                        required autocomplete="email"
+                      />
+                      <label for="emailInput">
+                        <i class="fas fa-envelope me-2"></i>Email profissional
+                      </label>
+                      <div class="invalid-feedback">
+                        Por favor, insira um email válido.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-floating mb-4">
+                  <select class="form-select" id="interestSelect" name="interest" required>
+                    <option value="" selected disabled>
+                      Selecione seu interesse principal
+                    </option>
+                    <option value="listener">Ouvinte</option>
+                    <option value="artist">Artista</option>
+                    <option value="producer">Produtor Musical</option>
+                    <option value="industry">Editora/Label</option>
+                  </select>
+                  <label for="interestSelect">
+                    <i class="fas fa-bullseye me-2"></i>Eu sou principalmente...
+                  </label>
+                </div>
+
+                <div class="benefits-checklist mb-5">
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <div class="benefit-item d-flex align-items-start">
+                        <i class="fas fa-crown text-mel-warning mt-1 me-3"></i>
+                        <div>
+                          <div class="fw-semibold">Badge de Fundador</div>
+                          <small class="text-mel-secondary"
+                            >Reconhecimento permanente</small
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="benefit-item d-flex align-items-start">
+                        <i class="fas fa-gift text-mel-primary mt-1 me-3"></i>
+                        <div>
+                          <div class="fw-semibold">7 Dias Grátis</div>
+                          <small class="text-mel-secondary"
+                            >Plano Premium incluído</small
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="benefit-item d-flex align-items-start">
+                        <i
+                          class="fas fa-vote-yea text-mel-success mt-1 me-3"
+                        ></i>
+                        <div>
+                          <div class="fw-semibold">Voz no Roadmap</div>
+                          <small class="text-mel-secondary"
+                            >Ajude a definir prioridades</small
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="benefit-item d-flex align-items-start">
+                        <i class="fas fa-comments text-mel-info mt-1 me-3"></i>
+                        <div>
+                          <div class="fw-semibold">Comunidade Exclusiva</div>
+                          <small class="text-mel-secondary"
+                            >Grupo WhatsApp VIP</small
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="d-grid">
+                  <button
+                    type="submit"
+                    class="btn btn-mel-gradient btn-lg py-3 fw-semibold"
+                  >
+                    <i class="fas fa-paper-plane me-2"></i>Inscrever-me Agora
+                  </button>
+                </div>
+              </form>
+
+              <div
+                id="successMessage"
+                class="alert alert-success mt-4 d-none"
+                role="alert"
+              >
+                <div class="d-flex">
+                  <i class="fas fa-check-circle fs-4 me-3"></i>
+                  <div>
+                    <h4 class="alert-heading h5 mb-2">Inscrição Confirmada!</h4>
+                    <p class="mb-0">
+                      <strong>Recebemos o seu registo!</strong> Em breve
+                      entraremos em contacto com novidades sobre o lançamento.
+                      Fique atento ao seu email.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="privacy-note mt-4 pt-4 border-top border-mel-border">
+                <div class="d-flex align-items-start">
+                  <i class="fas fa-lock text-mel-success mt-1 me-3"></i>
+                  <div>
+                    <small class="text-mel-secondary">
+                      Seus dados estão seguros. Ao se inscrever, você concorda
+                      com nossa
+                      <a href="#" class="text-mel-primary"
+                        >Política de Privacidade</a
+                      >. Nunca partilharemos seu email com terceiros.
+                    </small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Roadmap -->
+    <section
+      id="roadmap"
+      class="section roadmap bg-mel-elevated"
+      aria-labelledby="roadmap-title"
+    >
+      <div class="container">
+        <div class="row justify-content-center mb-6">
+          <div class="col-lg-9 text-center">
+            <h2 id="roadmap-title" class="display-5 fw-bold mb-4">
+              Construindo o <span class="text-mel-primary">futuro</span> juntos
+            </h2>
+            <p class="lead text-mel-secondary">
+              Transparência é um dos nossos valores fundamentais. Veja o que
+              estamos a construir e quando chegará até si.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item current">
+            <div class="timeline-marker">
+              <div
+                class="marker-dot"
+                style="background: var(--mel-primary)"
+              ></div>
+              <div class="marker-line"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-header mb-3">
+                <span class="badge bg-mel-primary text-dark">OUTUBRO 2026</span>
+                <h3 class="h4 fw-bold">Lançamento Oficial</h3>
+              </div>
+              <div class="timeline-body">
+                <p class="text-mel-secondary mb-3">
+                  Acesso aos primeiros 10.000 inscritos. Funcionalidades
+                  principais: streaming lossless, biblioteca pessoal, playlists
+                  e descoberta de artistas angolanos.
+                </p>
+                <div class="timeline-features">
+                  <span class="badge bg-dark text-mel-secondary me-2 mb-2"
+                    >Web Player</span
+                  >
+                  <span class="badge bg-dark text-mel-secondary me-2 mb-2"
+                    >Android App</span
+                  >
+                  <span class="badge bg-dark text-mel-secondary me-2 mb-2"
+                    >iOS App</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item upcoming">
+            <div class="timeline-marker">
+              <div
+                class="marker-dot"
+                style="background: var(--mel-border-color)"
+              ></div>
+              <div class="marker-line"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-header mb-3">
+                <span
+                  class="badge"
+                  style="
+                    background: var(--mel-border-color);
+                    color: var(--mel-text-secondary);
+                  "
+                  >JANEIRO 2027</span
+                >
+                <h3 class="h4 fw-bold">Social & Comunidade</h3>
+              </div>
+              <div class="timeline-body">
+                <p class="text-mel-secondary mb-3">
+                  Perfis sociais, seguir artistas, partilhar playlists,
+                  descoberta inteligente baseada em AI com foco em música
+                  nacional.
+                </p>
+                <div class="timeline-features">
+                  <span class="badge bg-dark text-mel-secondary me-2 mb-2"
+                    >Perfis Sociais</span
+                  >
+                  <span class="badge bg-dark text-mel-secondary me-2 mb-2"
+                    >AI Discovery</span
+                  >
+                  <span class="badge bg-dark text-mel-secondary me-2 mb-2"
+                    >Playlists Colaborativas</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item future">
+            <div class="timeline-marker">
+              <div
+                class="marker-dot"
+                style="background: var(--mel-border-color)"
+              ></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-header mb-3">
+                <span
+                  class="badge"
+                  style="
+                    background: var(--mel-border-color);
+                    color: var(--mel-text-secondary);
+                  "
+                  >ABRIL 2027</span
+                >
+                <h3 class="h4 fw-bold">Plataforma Completa</h3>
+              </div>
+              <div class="timeline-body">
+                <p class="text-mel-secondary mb-3">
+                  Marketplace para artistas, eventos ao vivo, integração com
+                  operadoras móveis, API para parceiros.
+                </p>
+                <div class="timeline-features">
+                  <span class="badge bg-dark text-mel-secondary me-2 mb-2"
+                    >Eventos Ao Vivo</span
+                  >
+                  <span class="badge bg-dark text-mel-secondary me-2 mb-2"
+                    >Marketplace</span
+                  >
+                  <span class="badge bg-dark text-mel-secondary me-2 mb-2"
+                    >API Pública</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-6">
+          <a href="#waitlist" class="btn btn-mel-outline btn-lg">
+            <i class="fas fa-road me-2"></i>Acompanhe o Desenvolvimento
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark pt-6 pb-4" aria-label="Rodapé institucional">
+      <div class="container mt-4">
+        <div class="row g-5 mb-6">
+          <div class="col-lg-4">
+            <div class="footer-brand mb-4">
+              <div class="d-flex align-items-center mb-3">
+                <img
+                  src="assets/img/meloou-logo.png"
+                  alt="Logo MELOOU Angola"
+                  height="40"
+                  class="img-fluid logo-image me-3"
+                />
+                <span class="fs-3 fw-bold logo-text">MELOOU</span>
+                <span class="badge bg-mel-primary text-dark ms-2">MUSIC</span>
+              </div>
+              <p class="text-mel-secondary">
+                A primeira plataforma de streaming musical construída em Angola,
+                com tecnologia de ponta e um compromisso inabalável com artistas
+                nacionais.
+              </p>
+            </div>
+
+            <div class="footer-contact">
+              <div class="d-flex align-items-center mb-2">
+                <i class="fas fa-map-marker-alt text-mel-secondary me-3"></i>
+                <small class="text-mel-secondary">Luanda, Angola</small>
+              </div>
+              <div class="d-flex align-items-center">
+                <i class="fas fa-envelope text-mel-secondary me-3"></i>
+                <small class="text-mel-secondary">melooumusic@gmail.com</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-4">
+            <h5 class="fw-bold mb-4">Plataforma</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a
+                  href="#diferenciais"
+                  class="text-mel-secondary text-decoration-none"
+                  >Funcionalidades</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="#artistas"
+                  class="text-mel-secondary text-decoration-none"
+                  >Para Artistas</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="#tecnologia"
+                  class="text-mel-secondary text-decoration-none"
+                  >Tecnologia</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#roadmap"
+                  class="text-mel-secondary text-decoration-none"
+                  >Roadmap</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-4">
+            <h5 class="fw-bold mb-4">Legal</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="#" class="text-mel-secondary text-decoration-none"
+                  >Privacidade</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-mel-secondary text-decoration-none"
+                  >Termos</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-mel-secondary text-decoration-none"
+                  >Cookies</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-4">
+            <h5 class="fw-bold mb-4">Conectar</h5>
+            <div class="social-links mb-4">
+              <a
+                href="https://www.instagram.com/melooumusic/"
+                class="btn btn-outline-light btn-sm me-2 mb-2"
+                aria-label="Instagram"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/meloou/"
+                class="btn btn-outline-light btn-sm mb-2"
+                aria-label="LinkedIn"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+
+            <div class="newsletter-small">
+              <p class="text-mel-secondary small mb-2">
+                Ainda não se inscreveu?
+              </p>
+              <a href="#waitlist" class="btn btn-mel-primary btn-sm w-100">
+                <i class="fas fa-paper-plane me-2"></i>Lista de espera VIP
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom pt-5 mt-4 border-top border-mel-border">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <div class="copyright text-mel-secondary">
+                © 2026 MELOOU MUSIC. Todos os direitos reservados.
+                <br />Plataforma em desenvolvimento.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/meloou.js"></script>
+  </body>
+</html>
